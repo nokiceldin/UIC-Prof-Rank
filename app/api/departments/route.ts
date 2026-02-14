@@ -1,28 +1,22 @@
 import "dotenv/config";
 import { NextResponse } from "next/server";
 
-import { PrismaPg } from "@prisma/adapter-pg";
 import { Pool } from "pg";
-
-import { PrismaClient } from "@prisma/client";
 
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-const prisma = new PrismaClient({
-  adapter: new PrismaPg(pool),
-});
-
 export async function GET() {
-  const rows = await prisma.professor.findMany({
-    select: { department: true },
-  });
+  const result = await pool.query(`
+    SELECT DISTINCT department
+    FROM professor
+    WHERE department IS NOT NULL AND department <> ''
+    ORDER BY department ASC
+  `);
 
-  const depts = Array.from(
-    new Set(rows.map((r) => r.department).filter(Boolean))
-  ).sort((a, b) => a.localeCompare(b));
-
+  const depts = result.rows.map((r) => r.department);
   return NextResponse.json(depts);
 }
+
