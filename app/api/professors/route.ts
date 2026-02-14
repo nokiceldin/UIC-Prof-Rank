@@ -1,15 +1,12 @@
-import "dotenv/config";
-
 import { NextResponse } from "next/server";
 
 import { PrismaPg } from "@prisma/adapter-pg";
 import { Pool } from "pg";
 
-import pkg from "@prisma/client";
-const { PrismaClient } = pkg;
+import { PrismaClient } from "@prisma/client";
+
 const C = 20; // minimum weight, tweak later
 const M = 4.0; // baseline average rating
-
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -29,11 +26,11 @@ export async function GET(req: Request) {
   const sort = (searchParams.get("sort") || "best").toLowerCase();
 
   const page = Math.max(1, Number(searchParams.get("page") || "1") || 1);
-  const pageSize = Math.min(100, Math.max(10, Number(searchParams.get("pageSize") || "50") || 50));
+  const pageSize = Math.min(
+    100,
+    Math.max(10, Number(searchParams.get("pageSize") || "50") || 50)
+  );
   const offset = (page - 1) * pageSize;
-
-  const C = 20;
-  const M = 4.0;
 
   const whereParts: string[] = [];
   const params: any[] = [];
@@ -74,16 +71,16 @@ export async function GET(req: Request) {
 
   let orderSql = `"score" DESC, "rmpRatingsCount" DESC, "name" ASC`;
   if (sort === "worst") orderSql = `"score" ASC, "rmpRatingsCount" DESC, "name" ASC`;
-  if (sort === "most") orderSql = `COALESCE("rmpRatingsCount", 0) DESC, COALESCE("rmpQuality", 0) DESC, "name" ASC`;
+  if (sort === "most") {
+    orderSql = `COALESCE("rmpRatingsCount", 0) DESC, COALESCE("rmpQuality", 0) DESC, "name" ASC`;
+  }
 
-  // total count
   const countRows = await prisma.$queryRawUnsafe<{ total: number }[]>(
     `SELECT COUNT(*)::int as total FROM "Professor" ${whereSql}`,
     ...params
   );
   const total = countRows?.[0]?.total ?? 0;
 
-  // paged data, globally sorted
   const dataParams = [...params, pageSize, offset];
   const rows = await prisma.$queryRawUnsafe<any[]>(
     `
@@ -113,4 +110,3 @@ export async function GET(req: Request) {
     items: rows,
   });
 }
-
