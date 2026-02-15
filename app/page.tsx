@@ -171,7 +171,7 @@ const start = (page - 1) * pageSize;
 <p className="mt-2 text-sm text-zinc-600">
 </p>
 
-        <p className="mt-2 text-sm text-zinc-600">
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
   Ranked by a weighted score so professors with more ratings are trusted more.
 </p>
 
@@ -198,7 +198,7 @@ const start = (page - 1) * pageSize;
     {/* Department */}
     <div className="sm:col-span-4">
       <select
-        className="cursor-pointer h-12 w-full rounded-xl border border-zinc-200 bg-white px-4 text-zinc-900 outline-none focus:ring-2 focus:ring-zinc-200 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-100 dark:focus:ring-zinc-700"
+        className="cursor-pointer h-12 w-full rounded-xl border border-zinc-200 bg-white pl-4 pr-8 text-zinc-900 outline-none focus:ring-2 focus:ring-zinc-200 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-100 dark:focus:ring-zinc-700"
         value={dept}
         onChange={(e) => {
           setDept(e.target.value);
@@ -357,7 +357,7 @@ const start = (page - 1) * pageSize;
           </div>
 
           <div className="col-span-3 text-right sm:text-left">
-            <span className="inline-block rounded-lg bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+<span className="inline-block rounded-full bg-zinc-100 px-2.5 py-1 text-[11px] font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-800/60 dark:text-zinc-300 dark:ring-zinc-700">
               {p.department}
             </span>
           </div>
@@ -365,14 +365,15 @@ const start = (page - 1) * pageSize;
           <div className="col-span-2 text-right">
   <span
     className={`inline-flex items-center justify-center gap-2 rounded-full px-3 py-1 text-sm font-semibold ${
-      p.quality >= 4.5
-        ? "bg-emerald-500/10 text-emerald-600"
-        : p.quality >= 4.0
-        ? "bg-green-100 text-green-700"
-        : p.quality >= 3.0
-        ? "bg-yellow-100 text-yellow-700"
-        : "bg-red-100 text-red-700"
-    }`}
+  p.quality >= 4.5
+    ? "bg-emerald-100 text-emerald-700 ring-1 ring-emerald-200 dark:bg-emerald-400/15 dark:text-emerald-200 dark:ring-emerald-300/25"
+    : p.quality >= 4.0
+    ? "bg-green-100 text-green-700 ring-1 ring-green-200 dark:bg-green-400/15 dark:text-green-200 dark:ring-green-300/25"
+    : p.quality >= 3.0
+    ? "bg-yellow-100 text-yellow-700 ring-1 ring-yellow-200 dark:bg-yellow-400/15 dark:text-yellow-200 dark:ring-yellow-300/25"
+    : "bg-red-100 text-red-700 ring-1 ring-red-200 dark:bg-red-400/15 dark:text-red-200 dark:ring-red-300/25"
+}`}
+
   >
     <span className="tabular-nums">
       {(Number(p.quality) || 0).toFixed(1)}
@@ -386,7 +387,7 @@ const start = (page - 1) * pageSize;
 
           <div className="col-span-2 text-right">
             <a
-              className="inline-flex items-center justify-center rounded-lg bg-zinc-900 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+className="inline-flex items-center justify-center rounded-lg bg-zinc-900 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-200 dark:text-zinc-900 dark:hover:bg-zinc-100"
               href={p.url}
               target="_blank"
               rel="noreferrer"
