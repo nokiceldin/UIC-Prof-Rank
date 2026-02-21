@@ -142,12 +142,12 @@ const baseBtn =
 
 function pageBtnClass(active: boolean) {
   return (
-    baseBtn +
-    " w-10 px-0 " +
-    (active
-      ? " pointer-events-none disabled:opacity-100 opacity-100 border-white/25 bg-white/10 text-white dark:border-white/25 dark:bg-white/10 dark:text-white"
-      : "")
-  );
+  baseBtn +
+  " min-w-10 px-3 tabular-nums flex items-center justify-center " +
+  (active
+    ? " pointer-events-none disabled:opacity-100 opacity-100 border-white/25 bg-white/10 text-white dark:border-white/25 dark:bg-white/10 dark:text-white"
+    : "")
+);
 }
 
 
@@ -274,46 +274,92 @@ const panel =
   }
 
   return (
-<main className="min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
-      <div className="mx-auto max-w-6xl px-5 py-10">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight">UIC Professors</h1>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Explore professors by class, department, and ratings to plan your schedule confidently.
-            </p>
-          </div>
+<main className="relative min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100"> <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-white/60 to-transparent dark:from-white/5" />     <div className="mx-auto max-w-6xl px-5 py-10">
+        <div className="rounded-3xl border border-zinc-800 dark:border-white/10 bg-white/70 p-6 shadow-lg backdrop-blur dark:border-white/10 dark:bg-zinc-950/40 dark:shadow-xl">
+  <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+    
+    <div>
+      <h1 className="text-4xl font-semibold tracking-[-0.01em]">UIC Professors</h1>
 
-         <div className="flex items-center gap-3">
-  <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">
-    {dark ? "Dark mode enabled" : "Light mode enabled"}
-  </span>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        Explore professors by class, department, and ratings to plan your schedule confidently.
+      </p>
 
-  <button
-  type="button"
-  role="switch"
-  aria-checked={dark}
-  onClick={() => setDark((d) => !d)}
-  className={`relative inline-flex h-8 w-14 items-center rounded-full border transition
-    ${dark
-      ? "bg-blue-600 border-blue-700"
-      : "bg-zinc-300 border-zinc-400 shadow-sm"
-    }
-    dark:bg-zinc-800 dark:border-zinc-700
-  `}
->
-  <span
-    className={`inline-block h-6 w-6 transform rounded-full bg-white shadow-md transition
-      ${dark ? "translate-x-7" : "translate-x-1"}
-    `}
-  />
-</button>
+      
+    </div>
 
+    <div className="flex items-center gap-3">
+      <span className="text-xs font-bold tracking-widest text-zinc-500 dark:text-zinc-400">
+        {dark ? "DARK" : "LIGHT"}
+      </span>
+
+      <button
+        type="button"
+        role="switch"
+        aria-checked={dark}
+        aria-label="Toggle dark mode"
+        onClick={() => setDark((d) => !d)}
+        className={[
+          "relative inline-flex h-10 w-24 items-center rounded-full border p-1 transition",
+          "bg-white/70 border-zinc-200 dark:bg-zinc-900/60 dark:border-white/10",
+          "shadow-sm backdrop-blur",
+          "focus:outline-none focus:ring-2 focus:ring-zinc-300 dark:focus:ring-white/15",
+        ].join(" ")}
+      >
+        <span
+          className={[
+            "absolute top-1 left-1 h-8 w-12 rounded-full transition-transform",
+            "bg-indigo-600 shadow-md",
+            dark ? "translate-x-10" : "translate-x-0",
+          ].join(" ")}
+        />
+
+        <span className="relative z-10 flex h-8 w-12 items-center justify-center">
+          <svg
+            viewBox="0 0 24 24"
+            className={[
+              "h-5 w-5 transition",
+              dark ? "text-zinc-400" : "text-white",
+            ].join(" ")}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="M4.93 4.93l1.41 1.41" />
+            <path d="M17.66 17.66l1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="M4.93 19.07l1.41-1.41" />
+            <path d="M17.66 6.34l1.41-1.41" />
+          </svg>
+        </span>
+
+        <span className="relative z-10 flex h-8 w-12 items-center justify-center">
+          <svg
+            viewBox="0 0 24 24"
+            className={[
+              "h-5 w-5 transition",
+              dark ? "text-white" : "text-zinc-400",
+            ].join(" ")}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+        </span>
+      </button>
+    </div>
+
+  </div>
 </div>
-
-
-
-        </div>
 
         <div className={panel}>
           <div className="grid gap-4 lg:grid-cols-2">
