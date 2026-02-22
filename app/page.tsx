@@ -670,8 +670,8 @@ const panel =
               <div className="col-span-4">Professor</div>
               <div className="col-span-3">Department</div>
               <div className="col-span-3">Classes</div>
-              <div className="col-span-1 text-right">Rating</div>
-              <div className="col-span-1 text-right">Link (RMP)</div>
+              <div className="col-span-1 text-right">RateMyProfessor Rating</div>
+              <div className="col-span-1 text-right">Link</div>
             </div>
 
             <ul>
