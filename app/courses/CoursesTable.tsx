@@ -332,18 +332,20 @@ const primaryPill =
                     <div className="text-xs text-zinc-600 dark:text-zinc-400">{c.title || "Untitled"}</div>
                   </div>
 
-                  {typeof c.difficultyScore === "number" ? (
-  <span
-    className={[
-      "inline-flex items-center justify-center rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
-      easinessPillClass(c.difficultyScore),
-    ].join(" ")}
-  >
-    {c.difficultyScore.toFixed(2)}
-  </span>
-) : (
-  <span className="text-zinc-500 dark:text-zinc-400">No data</span>
-)}
+                  <div className="col-span-3">
+  {typeof c.difficultyScore === "number" ? (
+    <span
+      className={[
+        "inline-flex items-center justify-center rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
+        easinessPillClass(c.difficultyScore),
+      ].join(" ")}
+    >
+      {c.difficultyScore.toFixed(2)}
+    </span>
+  ) : (
+    <span className="text-zinc-500 dark:text-zinc-400">No data</span>
+  )}
+</div>
 
                   <div className="col-span-2 flex justify-end">
                     <span className={pillValue}>{c.avgGpa == null ? "No data" : c.avgGpa.toFixed(2)}</span>

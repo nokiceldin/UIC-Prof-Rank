@@ -11,15 +11,7 @@ function parseSort(sort: string | undefined): SortKey {
   return "difficultyDesc"
 }
 
-function easinessPillClass(v: number) {
-  if (v >= 4.5)
-    return "bg-emerald-100 text-emerald-700 ring-1 ring-emerald-200 dark:bg-emerald-400/15 dark:text-emerald-200 dark:ring-emerald-300/25";
-  if (v >= 4.0)
-    return "bg-green-100 text-green-700 ring-1 ring-green-200 dark:bg-green-400/15 dark:text-green-200 dark:ring-green-300/25";
-  if (v >= 3.0)
-    return "bg-yellow-100 text-yellow-700 ring-1 ring-yellow-200 dark:bg-yellow-400/15 dark:text-yellow-200 dark:ring-yellow-300/25";
-  return "bg-red-100 text-red-700 ring-1 ring-red-200 dark:bg-red-400/15 dark:text-red-200 dark:ring-red-300/25";
-}
+
 
 export default async function CoursesPage({
   searchParams,
@@ -50,12 +42,12 @@ const where = {
         ],
       }
     : {}),
-  ...(hasSortParam && !hasQuery
-    ? {
-        difficultyScore: { not: null },
-        avgGpa: { gt: 0 },
-      }
-    : {}),
+...(!hasQuery
+  ? {
+      difficultyScore: { not: null },
+      avgGpa: { gt: 0 },
+    }
+  : {}),
 }
 
   const orderBy =

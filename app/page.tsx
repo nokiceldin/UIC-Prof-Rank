@@ -245,8 +245,7 @@ const panel =
 
   return (
 <main className="relative min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100"> <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-white/60 to-transparent dark:from-white/5" />     <div className="mx-auto max-w-6xl px-5 py-10">
-        <div className="rounded-3xl border border-zinc-800 dark:border-white/10 bg-white/70 p-6 shadow-lg backdrop-blur dark:border-white/10 dark:bg-zinc-950/40 dark:shadow-xl">
-  <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+<div className="rounded-3xl border border-zinc-200 bg-white/70 p-6 shadow-lg backdrop-blur dark:border-white/10 dark:bg-zinc-950/40 dark:shadow-xl">  <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
     
     <div className="flex items-start gap-4">
   <img
