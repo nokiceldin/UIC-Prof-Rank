@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useProfCoursesMap } from "@/app/hooks/useProfCoursesMap";
 import { ClassesCell } from "@/app/components/ClassesCell";
+import Link from "next/link";
 
 type Prof = {
   name: string;
@@ -132,8 +133,6 @@ useEffect(() => {
   const [page, setPage] = useState(1);
   const pageSize = 50;
 
-  const [dark, setDark] = useState(false);
-
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 const pageButtons = useMemo(() => getPageButtons(page, totalPages), [page, totalPages]);
 
@@ -226,35 +225,6 @@ const panel =
     return () => controller.abort();
   }, [query, dept, minRatings, minStars, page, sort, course]);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-
-    if (saved === "dark") {
-      setDark(true);
-      document.documentElement.classList.add("dark");
-      return;
-    }
-
-    if (saved === "light") {
-      setDark(false);
-      document.documentElement.classList.remove("dark");
-      return;
-    }
-
-    const alreadyDark = document.documentElement.classList.contains("dark");
-    setDark(alreadyDark);
-  }, []);
-
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [dark]);
-
   const hasAnyFilters =
     query.trim() ||
     course.trim() ||
@@ -296,76 +266,7 @@ const panel =
   </div>
 </div>
 
-    <div className="flex items-center gap-3">
-      <span className="text-xs font-bold tracking-widest text-zinc-500 dark:text-zinc-400">
-        {dark ? "DARK" : "LIGHT"}
-      </span>
-
-      <button
-        type="button"
-        role="switch"
-        aria-checked={dark}
-        aria-label="Toggle dark mode"
-        onClick={() => setDark((d) => !d)}
-        className={[
-          "relative inline-flex h-10 w-24 items-center rounded-full border p-1 transition",
-          "bg-white/70 border-zinc-200 dark:bg-zinc-900/60 dark:border-white/10",
-          "shadow-sm backdrop-blur",
-          "focus:outline-none focus:ring-2 focus:ring-zinc-300 dark:focus:ring-white/15",
-        ].join(" ")}
-      >
-        <span
-          className={[
-            "absolute top-1 left-1 h-8 w-12 rounded-full transition-transform",
-            "bg-indigo-600 shadow-md",
-            dark ? "translate-x-10" : "translate-x-0",
-          ].join(" ")}
-        />
-
-        <span className="relative z-10 flex h-8 w-12 items-center justify-center">
-          <svg
-            viewBox="0 0 24 24"
-            className={[
-              "h-5 w-5 transition",
-              dark ? "text-zinc-400" : "text-white",
-            ].join(" ")}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2" />
-            <path d="M12 20v2" />
-            <path d="M4.93 4.93l1.41 1.41" />
-            <path d="M17.66 17.66l1.41 1.41" />
-            <path d="M2 12h2" />
-            <path d="M20 12h2" />
-            <path d="M4.93 19.07l1.41-1.41" />
-            <path d="M17.66 6.34l1.41-1.41" />
-          </svg>
-        </span>
-
-        <span className="relative z-10 flex h-8 w-12 items-center justify-center">
-          <svg
-            viewBox="0 0 24 24"
-            className={[
-              "h-5 w-5 transition",
-              dark ? "text-white" : "text-zinc-400",
-            ].join(" ")}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
-          </svg>
-        </span>
-      </button>
-    </div>
-
+    
   </div>
 </div>
 
@@ -690,7 +591,13 @@ className="grid grid-cols-12 items-center border-b border-zinc-100 px-5 py-4 tex
                 >
                   <div className="col-span-4">
                     <div className="text-base font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-                      {start + idx + 1}. {p.name}
+                      {start + idx + 1}.{" "}
+<Link
+  href={`/professor/${p.slug}`}
+  className="hover:underline"
+>
+  {p.name}
+</Link>
                     </div>
                     <div className="text-xs text-zinc-600 dark:text-zinc-400">{p.school}</div>
                   </div>

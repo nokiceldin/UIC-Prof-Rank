@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Course" ADD COLUMN     "avgGpa" DOUBLE PRECISION,
+ADD COLUMN     "difficultyScore" DOUBLE PRECISION,
+ADD COLUMN     "totalRegsAllTime" INTEGER NOT NULL DEFAULT 0;
