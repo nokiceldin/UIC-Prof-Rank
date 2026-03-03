@@ -124,7 +124,7 @@ const primaryPill =
   }
 
   const inputBase =
-    "h-12 w-full rounded-2xl border border-zinc-200 bg-white px-4 text-zinc-900 outline-none " +
+    "h-10 w-full rounded-2xl border border-zinc-200 bg-white px-4 text-zinc-900 outline-none " +
     "placeholder:text-zinc-400 focus:border-zinc-300 focus:ring-2 focus:ring-zinc-200 " +
     "dark:border-white/10 dark:bg-zinc-950/40 dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:ring-white/10"
 
@@ -178,9 +178,9 @@ const primaryPill =
                       if (e.key === "Enter") applySearch()
                     }}
                   />
-                  <button type="button" className={pill} onClick={applySearch}>
-                    Apply
-                  </button>
+                  <button type="button" className={pill + " h-10"} onClick={applySearch}>
+  Apply
+</button>
                 </div>
               </div>
 
@@ -197,33 +197,33 @@ const primaryPill =
               </div>
             </div>
 
-            <div className="space-y-3">
-              <div>
-                <div className="mb-1 text-xs font-semibold text-zinc-600 dark:text-zinc-300">Sort</div>
-                <div className="grid gap-2 sm:grid-cols-2">
-                  <button
-                    type="button"
-                    className={sort === "difficultyDesc" ? primaryPill : pill}
-                    onClick={() => setSort("difficultyDesc")}
-                  >
-                    Easiest first
-                  </button>
-                  <button
-                    type="button"
-                    className={sort === "difficultyAsc" ? primaryPill : pill}
-                    onClick={() => setSort("difficultyAsc")}
-                  >
-                    Hardest first
-                  </button>
-                </div>
-              </div>
+            <div className="grid h-full grid-rows-[auto_1fr] gap-3">
+  <div>
+    <div className="mb-1 text-xs font-semibold text-zinc-600 dark:text-zinc-300">Sort</div>
+    <div className="grid gap-2 sm:grid-cols-2">
+      <button
+        type="button"
+        className={sort === "difficultyDesc" ? primaryPill : pill}
+        onClick={() => setSort("difficultyDesc")}
+      >
+        Easiest first
+      </button>
+      <button
+        type="button"
+        className={sort === "difficultyAsc" ? primaryPill : pill}
+        onClick={() => setSort("difficultyAsc")}
+      >
+        Hardest first
+      </button>
+    </div>
+  </div>
 
-              <div className="flex items-end">
-                <button type="button" className={pill + " w-full"} onClick={clearAll}>
-                  Clear filters
-                </button>
-              </div>
-            </div>
+  <div className="flex items-end">
+    <button type="button" className={pill + " w-full"} onClick={clearAll}>
+      Clear filters
+    </button>
+  </div>
+</div>
           </div>
 
           <div className="mt-4 flex flex-wrap items-center gap-2">
