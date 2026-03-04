@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/app/lib/prisma"
+import { Resend } from "resend"
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
   try {
@@ -28,6 +31,20 @@ export async function POST(req: Request) {
         page,
         userAgent,
       },
+    })
+
+    await resend.emails.send({
+      from: "UICProf <onboarding@resend.dev>",
+      to: process.env.MISSING_REPORT_TO_EMAIL!,
+      subject: `Missing professor report: ${professorName}`,
+      text:
+        `Professor: ${professorName}\n` +
+        `Department: ${department ?? "N/A"}\n` +
+        `Class: ${classInput ?? "N/A"}\n` +
+        `Page: ${page}\n` +
+        `Search query: ${searchQuery ?? "N/A"}\n` +
+        `Notes: ${notes ?? "N/A"}\n` +
+        `User-Agent: ${userAgent ?? "N/A"}\n`,
     })
 
     return NextResponse.json({ ok: true })
