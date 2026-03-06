@@ -53,7 +53,7 @@ export default function CourseInsightCards({
         {card(
           "Pass rate",
           `${passRate.toFixed(1)}%`,
-          "Using A, B, C as passing"
+          "Using A, B, C, D as passing"
         )}
 
         {card(

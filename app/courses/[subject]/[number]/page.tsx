@@ -6,6 +6,7 @@ import prisma from "@/app/lib/prisma";
 import CourseHeader from "../../../components/course/CourseHeader";
 import GradeDistributionCard from "../../../components/course/GradeDistributionCard";
 import CourseInsightCards from "../../../components/course/CourseInsightCards";
+import CourseGpaByProfessor from "../../../components/course/CourseGpaByProfessor";
 
 function decodeParam(value: string) {
   return decodeURIComponent(value || "").trim();
@@ -112,7 +113,7 @@ export default async function CourseDetailPage({
   const totalRegs = sum.gradeRegs ?? 0;
   const visualTotal = a + b + c + d + f + w;
 
-  const passRate = visualTotal > 0 ? ((a + b + c) / visualTotal) * 100 : 0;
+  const passRate = visualTotal > 0 ? ((a + b + c + d) / visualTotal) * 100 : 0;
   const withdrawalRate = visualTotal > 0 ? (w / visualTotal) * 100 : 0;
 
   const gradeMap = [
@@ -129,6 +130,43 @@ export default async function CourseDetailPage({
       (best, current) => (current.value > best.value ? current : best),
       gradeMap[0]
     )?.label ?? "N/A";
+
+  const professorGpas = instructorGroups
+    .map((row) => {
+      const pa = row._sum.a ?? 0;
+      const pb = row._sum.b ?? 0;
+      const pc = row._sum.c ?? 0;
+      const pd = row._sum.d ?? 0;
+      const pf = row._sum.f ?? 0;
+      const pw = row._sum.w ?? 0;
+      const pTotalRegs = row._sum.gradeRegs ?? 0;
+
+      const gradedCount = pa + pb + pc + pd + pf;
+
+      const avgGpa =
+        gradedCount > 0
+          ? (4 * pa + 3 * pb + 2 * pc + 1 * pd) / gradedCount
+          : null;
+
+      return {
+        instructorName: row.instructorName,
+        avgGpa,
+        gradedCount,
+        totalRegs: pTotalRegs,
+        a: pa,
+        b: pb,
+        c: pc,
+        d: pd,
+        f: pf,
+        w: pw,
+      };
+    })
+    .filter((row) => row.gradedCount >= 20)
+    .sort((x, y) => {
+      const gpaDiff = (y.avgGpa ?? -1) - (x.avgGpa ?? -1);
+      if (gpaDiff !== 0) return gpaDiff;
+      return y.gradedCount - x.gradedCount;
+    });
 
   return (
     <main className="relative min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
@@ -163,6 +201,13 @@ export default async function CourseDetailPage({
             passRate={passRate}
             withdrawalRate={withdrawalRate}
             mostCommonGrade={mostCommonGrade}
+          />
+        </div>
+
+        <div className="mt-6">
+          <CourseGpaByProfessor
+            professors={professorGpas}
+            courseLabel={`${course.subject} ${course.number}`}
           />
         </div>
 
