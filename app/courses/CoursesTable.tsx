@@ -23,6 +23,8 @@ type CourseRow = {
   difficultyScore: number | null
   avgGpa: number | null
   totalRegsAllTime: number | null
+  isGenEd: boolean
+  genEdCategory: string | null
 }
 
 function getPageButtons(current: number, total: number) {
@@ -48,6 +50,8 @@ export default function CoursesTable({
   dept,
   q,
   subjects,
+  gened,
+  genedCategory,
 }: {
   courses: CourseRow[]
   total: number
@@ -57,6 +61,8 @@ export default function CoursesTable({
   dept: string
   q: string
   subjects: string[]
+  gened: boolean
+  genedCategory: string
 }) {
   const nf = useMemo(() => new Intl.NumberFormat("en-US"), [])
   const pathname = usePathname()
@@ -87,6 +93,22 @@ export default function CoursesTable({
     pushWith({ dept: nextDept || null, page: "1" })
   }
 
+  function setGenEd(nextGenEd: boolean) {
+  pushWith({
+    gened: nextGenEd ? "1" : null,
+    genedCategory: nextGenEd ? genedCategory || null : null,
+    page: "1",
+  })
+}
+
+function setGenEdCategory(nextCategory: string) {
+  pushWith({
+    gened: "1",
+    genedCategory: nextCategory || null,
+    page: "1",
+  })
+}
+
   function applySearch() {
     const trimmed = qDraft.trim()
     pushWith({ q: trimmed ? trimmed : null, page: "1" })
@@ -97,6 +119,14 @@ export default function CoursesTable({
   }
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize))
+  const genEdCategories = [
+  "Analyzing the Natural World",
+  "Understanding the Individual and Society",
+  "Understanding the Past",
+  "Understanding the Creative Arts",
+  "Exploring World Cultures",
+  "Understanding U.S. Society",
+]
   const start = (page - 1) * pageSize
   const pageButtons = useMemo(() => getPageButtons(page, totalPages), [page, totalPages])
   const middle = pageButtons.filter((n) => n !== 1 && n !== totalPages)
@@ -196,6 +226,46 @@ const primaryPill =
                 </select>
               </div>
             </div>
+
+            <div>
+  <div className="mb-1 text-xs font-semibold text-zinc-600 dark:text-zinc-300">Gen Ed</div>
+  <div className="grid gap-2 sm:grid-cols-2">
+    <button
+      type="button"
+      className={gened ? primaryPill : pill}
+      onClick={() => setGenEd(true)}
+    >
+      Gen Ed only
+    </button>
+    <button
+      type="button"
+      className={!gened ? primaryPill : pill}
+      onClick={() => setGenEd(false)}
+    >
+      All courses
+    </button>
+  </div>
+</div>
+
+{gened ? (
+  <div>
+    <div className="mb-1 text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+      Gen Ed Category
+    </div>
+    <select
+      className={selectBase}
+      value={genedCategory || ""}
+      onChange={(e) => setGenEdCategory(e.target.value)}
+    >
+      <option value="">All Gen Ed categories</option>
+      {genEdCategories.map((cat) => (
+        <option key={cat} value={cat}>
+          {cat}
+        </option>
+      ))}
+    </select>
+  </div>
+) : null}
 
             <div className="grid h-full grid-rows-[auto_1fr] gap-3">
   <div>

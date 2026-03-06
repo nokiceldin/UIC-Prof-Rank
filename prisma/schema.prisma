@@ -3,9 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
 }
 
 model Professor {
@@ -65,6 +63,8 @@ model Course {
   totalRegsAllTime Int                         @default(0)
   instructorStats  CourseInstructorTermStats[]
   termStats        CourseTermStats[]
+  isGenEd       Boolean  @default(false)
+  genEdCategory String?
 
   @@unique([subject, number])
   @@index([deptName])

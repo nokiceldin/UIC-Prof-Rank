@@ -1,0 +1,3943 @@
+[
+  {
+    "subject": "AH",
+    "number": "100",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "110",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "111",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "122",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "125",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "130",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "140",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "150",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "160",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "172",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "180",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "201",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "209",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "210",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "211",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "219",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "220",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "223",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "230",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "231",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "242",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "243",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "244",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "250",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "251",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "252",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "259",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "260",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "261",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "262",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "263",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "264",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "265",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "270",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "271",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "273",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "274",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "AH",
+    "number": "275",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "100",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "102",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "105",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "207",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "208",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "215",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "216",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "218",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "219",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "238",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "273",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "277",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ANTH",
+    "number": "279",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ARAB",
+    "number": "105",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ARAB",
+    "number": "230",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ARAB",
+    "number": "250",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ARAB",
+    "number": "270",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ARCH",
+    "number": "200",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ARCH",
+    "number": "210",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "110",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "112",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "130",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "140",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "150",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "151",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "160",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "170",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "190",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ART",
+    "number": "290",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "BIOS",
+    "number": "104",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "BIOS",
+    "number": "110",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "BIOS",
+    "number": "120",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "101",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "103",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "104",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "105",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "110",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "111",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "125",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "207",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "246",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "247",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "248",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "249",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "250",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "262",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "263",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "265",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "271",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "BLST",
+    "number": "272",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CEES",
+    "number": "208",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CEES",
+    "number": "246",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CEES",
+    "number": "250",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "CHE",
+    "number": "150",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "100",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "105",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "115",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "116",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "118",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "122",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "123",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "124",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "125",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHEM",
+    "number": "130",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CHIN",
+    "number": "210",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "100",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "101",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "102",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "103",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "204",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "205",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "208",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "218",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "250",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "251",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "252",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "253",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CL",
+    "number": "297",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "101",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "102",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "110",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "114",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "120",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "121",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "122",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "200",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CLJ",
+    "number": "230",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "CME",
+    "number": "111",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "CME",
+    "number": "112",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "COMM",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "COMM",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "COMM",
+    "number": "102",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "COMM",
+    "number": "103",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "COMM",
+    "number": "140",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "COMM",
+    "number": "200",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "CS",
+    "number": "100",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "CST",
+    "number": "150",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "102",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "201",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "202",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "203",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "204",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "205",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "DHD",
+    "number": "206",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "DLG",
+    "number": "220",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "EAES",
+    "number": "101",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "EAES",
+    "number": "105",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "EAES",
+    "number": "111",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "EAES",
+    "number": "203",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "ECE",
+    "number": "115",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "ECON",
+    "number": "106",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ECON",
+    "number": "111",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ECON",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ECON",
+    "number": "121",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "135",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "200",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "205",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "217",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "222",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "252",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "253",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "258",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ED",
+    "number": "264",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "101",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "103",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "104",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "105",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "123",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "131",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "132",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "135",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "154",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "175",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "207",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "208",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "209",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "213",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "223",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "230",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "232",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "233",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "236",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "237",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "238",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "245",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "247",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "251",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "253",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "258",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "264",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "267",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "269",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "290",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "291",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENGL",
+    "number": "292",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "ENTR",
+    "number": "200",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "EPSY",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "EPSY",
+    "number": "160",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "EPSY",
+    "number": "242",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "FIN",
+    "number": "250",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "FR",
+    "number": "191",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "FR",
+    "number": "295",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "FR",
+    "number": "297",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "FR",
+    "number": "298",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GEOG",
+    "number": "161",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GEOG",
+    "number": "203",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "100",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "122",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "123",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "125",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "217",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "219",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "228",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "GER",
+    "number": "240",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "GKM",
+    "number": "105",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GKM",
+    "number": "203",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GKM",
+    "number": "285",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "GKM",
+    "number": "286",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "GKM",
+    "number": "296",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "100",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "201",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "210",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "215",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "217",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "223",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "229",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "230",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "242",
+    "categories": [
+      "Exploring World Cultures",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "244",
+    "categories": [
+      "Exploring World Cultures",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "248",
+    "categories": [
+      "Exploring World Cultures",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "250",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "252",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "263",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "270",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GLAS",
+    "number": "274",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GWS",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GWS",
+    "number": "102",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GWS",
+    "number": "204",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "GWS",
+    "number": "255",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "GWS",
+    "number": "262",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "100",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "101",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "103",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "104",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "105",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "106",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "108",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "109",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "117",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "137",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "161",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "170",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "177",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "200",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "202",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "203",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "208",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "211",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "213",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "214",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "220",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "221",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "222",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "223",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "224",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "225",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "226",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "233",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "234",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "235",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "236",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "237",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "238",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "239",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "240",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "241",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "242",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "244",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "245",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "246",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "249",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "251",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "252",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "253",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "255",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "256",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "257",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "259",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "261",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "262",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "264",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "266",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "267",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "268",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "269",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "271",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "272",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "275",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "276",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "277",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "278",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "282",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "289",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HIST",
+    "number": "293",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HN",
+    "number": "196",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "HN",
+    "number": "202",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HN",
+    "number": "213",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "121",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "122",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "123",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "124",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "125",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "126",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "127",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "128",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "129",
+    "categories": [
+      "Exploring World Cultures",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "130",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "131",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "132",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "133",
+    "categories": [
+      "Analyzing the Natural World",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "134",
+    "categories": [
+      "Analyzing the Natural World",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "140",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "141",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "142",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "143",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "144",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "HON",
+    "number": "145",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "HUM",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "IDEA",
+    "number": "110",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "IE",
+    "number": "118",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "ITAL",
+    "number": "230",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ITAL",
+    "number": "249",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ITAL",
+    "number": "270",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "ITAL",
+    "number": "280",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ITAL",
+    "number": "285",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "ITAL",
+    "number": "293",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "JST",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "JST",
+    "number": "102",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "JST",
+    "number": "103",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "JST",
+    "number": "124",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "JST",
+    "number": "203",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "JST",
+    "number": "242",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "KN",
+    "number": "150",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "KN",
+    "number": "152",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "KOR",
+    "number": "130",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "KOR",
+    "number": "230",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "101",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "102",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "103",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "104",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "105",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "107",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "108",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "109",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "110",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "220",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "260",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "269",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "275",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "276",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "278",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "283",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "290",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LALS",
+    "number": "295",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LCSL",
+    "number": "250",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LCSL",
+    "number": "260",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "LCSL",
+    "number": "261",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "LCSL",
+    "number": "275",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "LCSL",
+    "number": "294",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LING",
+    "number": "150",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "LING",
+    "number": "160",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LING",
+    "number": "170",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LING",
+    "number": "260",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "LITH",
+    "number": "115",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "LITH",
+    "number": "130",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "125",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "160",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "165",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "170",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "180",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "181",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MATH",
+    "number": "210",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MCS",
+    "number": "160",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MILS",
+    "number": "217",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "MOVI",
+    "number": "207",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "100",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "107",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "113",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "114",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "115",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "116",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "117",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "118",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "119",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "127",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "227",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "MUS",
+    "number": "240",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "NAST",
+    "number": "113",
+    "categories": [
+      "Understanding the Past",
+      "Exploring World Cultures",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "NATS",
+    "number": "105",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "NATS",
+    "number": "106",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "NUEL",
+    "number": "244",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "PHAR",
+    "number": "201",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "102",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "103",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "104",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "105",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "106",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "107",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "108",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "109",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "110",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "111",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "112",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "113",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "115",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "131",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "225",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PHIL",
+    "number": "240",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "112",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "116",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "118",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "131",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "132",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "141",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PHYS",
+    "number": "142",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "POL",
+    "number": "115",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POL",
+    "number": "120",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POL",
+    "number": "130",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POL",
+    "number": "140",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POL",
+    "number": "150",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POL",
+    "number": "220",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "120",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "130",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "184",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "231",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "232",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "POLS",
+    "number": "243",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "210",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "212",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "220",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "230",
+    "categories": [
+      "Understanding the Past",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "231",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "232",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "PPOL",
+    "number": "240",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PSCH",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PSCH",
+    "number": "210",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PSCH",
+    "number": "231",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PSCH",
+    "number": "270",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PSCH",
+    "number": "271",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "PUBH",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "PUBH",
+    "number": "110",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "PUBH",
+    "number": "120",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PUBH",
+    "number": "130",
+    "categories": [
+      "Analyzing the Natural World"
+    ]
+  },
+  {
+    "subject": "PUBH",
+    "number": "200",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "101",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "120",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "128",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "130",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "230",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "232",
+    "categories": [
+      "Understanding the Past"
+    ]
+  },
+  {
+    "subject": "RELS",
+    "number": "250",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "115",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "116",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "120",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "130",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "140",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "150",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "241",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "242",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "244",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "247",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "RUSS",
+    "number": "248",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "SJ",
+    "number": "101",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "SJ",
+    "number": "201",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "105",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "215",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "224",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "225",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "228",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "229",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "241",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "244",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "245",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "246",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "251",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "265",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "268",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "SOC",
+    "number": "276",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SPAN",
+    "number": "192",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "SPAN",
+    "number": "224",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "SPAN",
+    "number": "225",
+    "categories": [
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "SPAN",
+    "number": "226",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "SPED",
+    "number": "201",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "SPED",
+    "number": "202",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "101",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "102",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "103",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "105",
+    "categories": [
+      "Understanding the Creative Arts",
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "159",
+    "categories": [
+      "Understanding the Past",
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "201",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "THTR",
+    "number": "245",
+    "categories": [
+      "Understanding the Creative Arts"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "100",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "101",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "130",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "140",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "202",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "205",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "208",
+    "categories": [
+      "Understanding the Individual and Society"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "220",
+    "categories": [
+      "Understanding the Individual and Society",
+      "Exploring World Cultures"
+    ]
+  },
+  {
+    "subject": "US",
+    "number": "230",
+    "categories": [
+      "Understanding U.S. Society"
+    ]
+  }
+]

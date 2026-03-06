@@ -1,5 +1,12 @@
 {
-  "files.exclude": { "**/.next": true },
-  "search.exclude": { "**/.next": true },
+  "files.exclude": {
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/.next": true
+  },
+  "files.watcherExclude": {
+    "**/.next/**": true
+  },
   "explorer.excludeGitIgnore": true
 }

@@ -16,7 +16,14 @@ function parseSort(sort: string | undefined): SortKey {
 export default async function CoursesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ sort?: string; page?: string; dept?: string; q?: string }>
+  searchParams: Promise<{
+  sort?: string
+  page?: string
+  dept?: string
+  q?: string
+  gened?: string
+  genedCategory?: string
+}>
 }) {
   const sp = await searchParams
 
@@ -27,6 +34,9 @@ export default async function CoursesPage({
 
   const dept = sp.dept?.trim() || ""
   const q = sp.q?.trim() || ""
+
+  const gened = sp.gened === "1"
+const genedCategory = sp.genedCategory?.trim() || ""
 
   const hasSortParam = !!sp.sort
 const hasQuery = q.length > 0
@@ -42,12 +52,14 @@ const where = {
         ],
       }
     : {}),
-...(!hasQuery
-  ? {
-      difficultyScore: { not: null },
-      avgGpa: { gt: 0 },
-    }
-  : {}),
+  ...(gened ? { isGenEd: true } : {}),
+  ...(genedCategory ? { genEdCategory: genedCategory } : {}),
+  ...(!hasQuery
+    ? {
+        difficultyScore: { not: null },
+        avgGpa: { gt: 0 },
+      }
+    : {}),
 }
 
   const orderBy =
@@ -79,6 +91,8 @@ const where = {
         difficultyScore: true,
         avgGpa: true,
         totalRegsAllTime: true,
+        isGenEd: true,
+  genEdCategory: true,
       },
     }),
     prisma.course.count({ where }),
@@ -101,6 +115,8 @@ const where = {
       dept={dept}
       q={q}
       subjects={subjects}
+      gened={gened}
+      genedCategory={genedCategory}
     />
   )
 }

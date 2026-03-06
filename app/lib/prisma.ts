@@ -30,3 +30,4 @@ if (process.env.NODE_ENV !== "production") {
   globalForPrisma.pgPool = pool;
   globalForPrisma.prisma = prisma;
 }
+export default prisma;
