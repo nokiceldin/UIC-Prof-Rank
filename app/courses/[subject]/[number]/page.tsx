@@ -46,6 +46,25 @@ export default async function CourseDetailPage({
 
   if (!course) notFound();
 
+    const recentTerms = await prisma.term.findMany({
+    where: {
+      code: {
+        in: [
+          "2024SP",
+          "2024SU",
+          "2024FA",
+          "2025SP",
+          "2025SU",
+          "2025FA",
+          "2026SP",
+        ],
+      },
+    },
+    select: { id: true },
+  });
+
+  const recentTermIds = recentTerms.map((t) => t.id);
+
   const [totals, instructorGroups] = await Promise.all([
     prisma.courseTermStats.aggregate({
       where: { courseId: course.id },
@@ -71,7 +90,10 @@ export default async function CourseDetailPage({
     }),
     prisma.courseInstructorTermStats.groupBy({
       by: ["instructorName"],
-      where: { courseId: course.id },
+      where: {
+        courseId: course.id,
+        termId: { in: recentTermIds },
+      },
       _sum: {
         gradeRegs: true,
         a: true,

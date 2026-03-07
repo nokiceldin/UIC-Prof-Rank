@@ -1,8 +1,26 @@
+import "dotenv/config";
 import fs from "fs";
 import path from "path";
 import { PrismaClient } from "@prisma/client";
+import { Pool } from "pg";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-const prisma = new PrismaClient();
+const connectionString = process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error("DATABASE_URL is missing");
+}
+
+const pool = new Pool({
+  connectionString,
+  max: 5,
+});
+
+const adapter = new PrismaPg(pool);
+
+const prisma = new PrismaClient({
+  adapter,
+});
 
 function getArg(name) {
   const idx = process.argv.indexOf(`--${name}`);
