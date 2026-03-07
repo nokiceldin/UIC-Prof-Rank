@@ -120,9 +120,10 @@ export default function CoursesTable({
     });
   }
 
-  function clearAll() {
-    router.push(`${pathname}?sort=difficultyDesc&page=1`);
-  }
+function clearAll() {
+  setQDraft("");
+  router.push(`${pathname}?sort=difficultyDesc&page=1`);
+}
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const genEdCategories = [
@@ -142,13 +143,13 @@ export default function CoursesTable({
     "dark:border-white/10 dark:bg-zinc-950/40 dark:text-zinc-100 dark:hover:bg-zinc-900/40";
 
   const primaryPill =
-    "h-11 sm:h-10 rounded-2xl border border-zinc-300 bg-zinc-100 px-4 text-sm font-semibold text-zinc-900 " +
+    "h-9 rounded-xl border border-zinc-300 bg-zinc-100 px-4 text-sm font-semibold text-zinc-900 " +
     "ring-2 ring-zinc-200 shadow-sm " +
     "dark:border-white/20 dark:bg-white/10 dark:text-zinc-100 dark:ring-white/15";
 
-  const pill =
-    "h-11 sm:h-10 rounded-2xl border border-zinc-200 bg-white px-4 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 " +
-    "dark:border-white/10 dark:bg-white/5 dark:text-zinc-100 dark:hover:bg-white/10";
+const pill =
+  "h-9 rounded-xl border border-zinc-200 bg-white px-4 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 " +
+  "dark:border-white/10 dark:bg-white/5 dark:text-zinc-100 dark:hover:bg-white/10";
 
   function pageBtnClass(active: boolean) {
     return (
@@ -181,6 +182,13 @@ export default function CoursesTable({
   const pillValue =
     "inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-2.5 sm:px-3 py-1 text-[11px] sm:text-[11.5px] font-semibold text-zinc-800 " +
     "dark:border-white/10 dark:bg-white/5 dark:text-zinc-100 tabular-nums";
+
+  const hasAnyFilters =
+  !!q.trim() ||
+  !!dept ||
+  gened ||
+  !!genedCategory ||
+  sort !== "difficultyDesc";
 
   return (
     <main className="relative min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
@@ -259,7 +267,7 @@ export default function CoursesTable({
 
             <div className="col-span-2">
               <div className="mb-1 text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                Gen Ed
+                Course Filter
               </div>
 
               <div className="grid grid-cols-2 gap-2">
@@ -304,16 +312,6 @@ export default function CoursesTable({
                 </button>
               </div>
             </div>
-
-            <div className="col-span-2">
-  <button
-    type="button"
-    className={pill + " w-full"}
-    onClick={clearAll}
-  >
-    Clear filters
-  </button>
-</div>
           </div>
 
           <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -347,6 +345,16 @@ export default function CoursesTable({
                 Gen Ed: <span className="font-bold">On</span> <span className="opacity-70">x</span>
               </button>
             ) : null}
+
+            {hasAnyFilters ? (
+  <button
+    type="button"
+    onClick={clearAll}
+    className="inline-flex items-center rounded-full border border-zinc-200 px-3 py-1 text-xs font-semibold text-zinc-600 transition hover:bg-zinc-50 hover:text-zinc-900 dark:border-white/10 dark:text-zinc-300 dark:hover:bg-white/5 dark:hover:text-zinc-100"
+  >
+    Clear all
+  </button>
+) : null}
 
             {gened && genedCategory ? (
               <button type="button" className={chip} onClick={() => setGenEdCategory("")}>
@@ -422,53 +430,61 @@ export default function CoursesTable({
             </div>
 
             <ul>
-              {courses.map((c) => (
-                <li
-                  key={c.id}
-                  className="grid grid-cols-12 items-center border-b border-zinc-100 px-3 sm:px-5 py-4 text-sm transition hover:bg-zinc-50 dark:border-white/5 dark:hover:bg-white/5"
-                >
-                  <div className="col-span-5">
-                    <Link
-                      href={`/courses/${encodeURIComponent(c.subject)}/${encodeURIComponent(c.number)}`}
-                      className="group block"
-                    >
-                      <div className="text-sm sm:text-base font-semibold tracking-tight text-zinc-900 group-hover:underline dark:text-zinc-100">
-                        {c.subject} {c.number}
-                      </div>
-                      <div className="text-[11px] sm:text-xs text-zinc-600 dark:text-zinc-400">
-                        {c.title || "Untitled"}
-                      </div>
-                    </Link>
-                  </div>
+              {courses.map((c) => {
+  const href = `/courses/${encodeURIComponent(c.subject)}/${encodeURIComponent(c.number)}`;
 
-                  <div className="col-span-3">
-                    {typeof c.difficultyScore === "number" ? (
-                      <span
-                        className={[
-                          "inline-flex items-center justify-center rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-sm font-semibold tabular-nums",
-                          easinessPillClass(c.difficultyScore),
-                        ].join(" ")}
-                      >
-                        {c.difficultyScore.toFixed(2)}
-                      </span>
-                    ) : (
-                      <span className="text-[11px] text-zinc-500 dark:text-zinc-400">No data</span>
-                    )}
-                  </div>
+  return (
+    <li
+      key={c.id}
+      role="link"
+      tabIndex={0}
+      onClick={() => router.push(href)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          router.push(href);
+        }
+      }}
+      className="group grid cursor-pointer grid-cols-12 items-center border-b border-zinc-100 px-3 py-4 text-sm transition hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-300 sm:px-5 dark:border-white/5 dark:hover:bg-white/5 dark:focus:ring-white/20"
+    >
+      <div className="col-span-5">
+        <div className="text-sm font-semibold tracking-tight text-zinc-900 group-hover:underline sm:text-base dark:text-zinc-100">
+          {c.subject} {c.number}
+        </div>
+        <div className="text-[11px] text-zinc-600 sm:text-xs dark:text-zinc-400">
+          {c.title || "Untitled"}
+        </div>
+      </div>
 
-                  <div className="col-span-2 flex justify-end">
-                    <span className={pillValue}>
-                      {c.avgGpa == null ? "No data" : c.avgGpa.toFixed(2)}
-                    </span>
-                  </div>
+      <div className="col-span-3">
+        {typeof c.difficultyScore === "number" ? (
+          <span
+            className={[
+              "inline-flex items-center justify-center rounded-full px-2.5 py-1 text-[11px] font-semibold tabular-nums sm:px-3 sm:text-sm",
+              easinessPillClass(c.difficultyScore),
+            ].join(" ")}
+          >
+            {c.difficultyScore.toFixed(2)}
+          </span>
+        ) : (
+          <span className="text-[11px] text-zinc-500 dark:text-zinc-400">No data</span>
+        )}
+      </div>
 
-                  <div className="col-span-2 flex justify-end">
-                    <span className={pillValue}>
-                      {c.totalRegsAllTime == null ? "0" : nf.format(c.totalRegsAllTime)}
-                    </span>
-                  </div>
-                </li>
-              ))}
+      <div className="col-span-2 flex justify-end">
+        <span className={pillValue}>
+          {c.avgGpa == null ? "No data" : c.avgGpa.toFixed(2)}
+        </span>
+      </div>
+
+      <div className="col-span-2 flex justify-end">
+        <span className={pillValue}>
+          {c.totalRegsAllTime == null ? "0" : nf.format(c.totalRegsAllTime)}
+        </span>
+      </div>
+    </li>
+  );
+})}
 
               {courses.length === 0 ? (
                 <li className="px-5 py-10 text-sm text-zinc-600 dark:text-zinc-400">
