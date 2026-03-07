@@ -24,9 +24,9 @@ export default function Navbar() {
           href="/professors"
           className="flex items-center gap-3 rounded-xl px-2 py-1 hover:bg-zinc-100/60 dark:hover:bg-white/10"
         >
-          <Image src="/logo.png" alt="UICProf" width={36} height={36} />
+          <Image src="/logo.png" alt="UIC Ratings" width={36} height={36} />
           <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-            UICProf
+            UIC Ratings
           </span>
         </Link>
 

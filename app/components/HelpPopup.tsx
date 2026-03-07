@@ -18,7 +18,7 @@ export default function HelpPopup() {
         <div className="fixed bottom-20 right-6 z-50 w-[320px] rounded-2xl border border-zinc-200 bg-white p-4 shadow-2xl dark:border-white/10 dark:bg-zinc-950">
           <div className="mb-3 flex items-start justify-between gap-3">
             <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
-              About UICProf
+              About UIC Ratings
             </h2>
 
             <button
@@ -32,7 +32,7 @@ export default function HelpPopup() {
 
           <div className="space-y-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
             <p>
-              UICProf helps students compare professors using ratings, classes taught, and course difficulty data.
+              UIC Ratings helps students compare professors using ratings, classes taught, and course difficulty data.
             </p>
             <p>
               Use filters to search by department, course, or rating.

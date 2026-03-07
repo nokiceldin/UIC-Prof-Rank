@@ -34,7 +34,7 @@ export async function POST(req: Request) {
     })
 
     await resend.emails.send({
-      from: "UICProf <onboarding@resend.dev>",
+      from: "UIC Ratings <onboarding@resend.dev>",
       to: process.env.MISSING_REPORT_TO_EMAIL!,
       subject: `Missing professor report: ${professorName}`,
       text:

@@ -25,8 +25,7 @@ export default function Home() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 lg:mx-0">
-              Search professors and courses using real student ratings plus grade distribution data so you can build a smarter schedule.
-            </p>
+Find the best professors, easiest classes, and smartest schedule before registration opens.            </p>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
               <Link
@@ -85,7 +84,7 @@ className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-em
               <>
   <Image
     src="/hero-course-light.png"
-    alt="UICProf course analytics preview"
+    alt="UIC Ratings course analytics preview"
     width={2200}
     height={1400}
     priority
@@ -94,7 +93,7 @@ className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-em
 
   <Image
     src="/hero-course-dark.png"
-    alt="UICProf course analytics preview"
+    alt="UIC Ratings course analytics preview"
     width={2200}
     height={1400}
     priority

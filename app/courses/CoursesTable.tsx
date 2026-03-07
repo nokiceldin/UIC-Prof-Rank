@@ -182,7 +182,7 @@ export default function CoursesTable({
         <div className="rounded-3xl border border-zinc-200 bg-white/70 p-6 shadow-lg backdrop-blur dark:border-white/10 dark:bg-zinc-950/40 dark:shadow-xl">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex items-start gap-4">
-              <img src="/logo.png" alt="UICProf Logo" className="h-10 w-10 object-contain" />
+              <img src="/logo.png" alt="UIC Ratings Logo" className="h-10 w-10 object-contain" />
               <div>
                 <h1 className="text-4xl font-semibold tracking-[-0.01em]">UIC Courses</h1>
                 <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
