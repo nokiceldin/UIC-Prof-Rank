@@ -395,7 +395,7 @@ export default function Page() {
         </div>
 
         <div className="mt-6 overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-lg dark:border-white/10 dark:bg-zinc-900/40 dark:shadow-xl dark:backdrop-blur">
-          <div className="max-h-[70vh] overflow-auto">
+          <div className="max-h-[80vh] overflow-auto">
             <div className="min-w-[640px]">
               <div className="sticky top-0 z-10 grid grid-cols-12 border-b border-zinc-200 bg-white px-3 py-3 text-[11px] font-semibold text-zinc-700 sm:px-5 sm:text-xs dark:border-white/10 dark:bg-zinc-950/40 dark:text-zinc-300 dark:backdrop-blur">
                 <div className="col-span-5 sm:col-span-4">Professor</div>
@@ -490,7 +490,9 @@ export default function Page() {
       </div>
 
       <footer className="mt-12 border-t border-zinc-200 pt-6 text-center text-sm text-zinc-500 dark:border-white/10 dark:text-zinc-400">
-        <p>Not Affiliated with UIC or RMP</p>
+        Contact: uicratings@gmail.com
+          <br />
+          Not affiliated with UIC or RMP.
       </footer>
     </main>
   );

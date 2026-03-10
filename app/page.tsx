@@ -154,6 +154,8 @@ export default function Home() {
 
         {/* FOOTER */}
         <div className="mt-24 text-center text-sm text-zinc-500 sm:mt-32 lg:mt-40 dark:text-zinc-400">
+          Contact: uicratings@gmail.com
+          <br />
           Not affiliated with UIC or RMP.
         </div>
       </div>

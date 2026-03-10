@@ -496,6 +496,8 @@ const pill =
         </div>
 
         <footer className="mt-12 border-t border-zinc-200 pt-6 text-center text-sm text-zinc-500 dark:border-white/10 dark:text-zinc-400">
+          Contact: uicratings@gmail.com
+          <br />
           Not affiliated with UIC or RMP.
         </footer>
       </div>
