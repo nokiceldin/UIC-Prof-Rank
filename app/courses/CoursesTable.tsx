@@ -418,10 +418,6 @@ const pill =
     <div className="tabular-nums">
       Showing {nf.format(start + 1)} to {nf.format(Math.min(start + pageSize, total))} of {nf.format(total)}
     </div>
-
-    <div>
-      <MissingCourseButton searchQuery={q.trim()} show />
-    </div>
   </div>
 
   <div className="flex items-center gap-2">
@@ -559,6 +555,9 @@ const pill =
               ) : null}
             </ul>
           </div>
+        </div>
+                <div className="mt-4 flex justify-center">
+          <MissingCourseButton searchQuery={q.trim()} show />
         </div>
 
         <footer className="mt-12 border-t border-zinc-200 pt-6 text-center text-sm text-zinc-500 dark:border-white/10 dark:text-zinc-400">
