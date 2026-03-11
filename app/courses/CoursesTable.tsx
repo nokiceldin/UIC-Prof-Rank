@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { majorRequirements } from "@/lib/majorRequirements";
 import { useEffect, useMemo, useState } from "react";
+import MissingCourseButton from "@/app/components/MissingCourseButton";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 function easinessPillClass(v: number) {
@@ -408,6 +409,9 @@ const pill =
                 Category: <span className="font-bold">{genedCategory}</span> <span className="opacity-70">x</span>
               </button>
             ) : null}
+          </div>
+                    <div className="mt-3 flex justify-end">
+            <MissingCourseButton searchQuery={q.trim()} show />
           </div>
         </div>
 
