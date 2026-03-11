@@ -186,69 +186,6 @@ export const majorRequirements: MajorRequirement[] = [
   ],
 },
 {
-  key: "health-information-management-health-informatics",
-  label: "Health Information Management / Health Informatics (Joint BS/MS)",
-  categories: [
-    {
-      key: "pre-him-required",
-      label: "Pre-Health Information Management required courses",
-      courses: [
-        "ENGL 160",
-        "ENGL 161",
-        "BIOS 110",
-        "KN 230",
-        "KN 231",
-        "MATH 110",
-        "STAT 101",
-        "PSCH 100",
-        "IDS 200"
-      ],
-    },
-    {
-      key: "him-core",
-      label: "Health Information Management core courses",
-      courses: [
-        "HIM 101",
-        "HIM 410",
-        "HIM 317",
-        "HIM 319",
-        "HIM 320",
-        "HIM 329",
-        "HIM 361",
-        "HIM 432",
-        "HIM 433",
-        "HIM 337",
-        "HIM 343",
-        "HIM 374",
-        "HIM 377",
-        "HIM 384",
-        "HIM 481",
-        "BHIS 405",
-        "BHIS 406",
-        "BHIS 410",
-        "BHIS 460",
-        "BHIS 461",
-        "BHIS 480"
-      ],
-    },
-    {
-      key: "health-informatics-graduate",
-      label: "Health Informatics graduate courses",
-      courses: [
-        "BHIS 437",
-        "BHIS 520",
-        "BHIS 499",
-        "BHIS 515",
-        "BHIS 503",
-        "BHIS 505",
-        "BHIS 525",
-        "BHIS 593",
-        "BHIS 530"
-      ],
-    }
-  ],
-},
-{
   key: "disability-and-human-development",
   label: "Disability and Human Development",
   categories: [
@@ -1949,7 +1886,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "chemistry",
-  label: "Chemistry",
+  label: "Chemistry (BS)",
   categories: [
     {
       key: "chemistry-core",
@@ -2469,7 +2406,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "physics",
-  label: "Physics",
+  label: "Physics (BS)",
   categories: [
     {
       key: "physics-core",
@@ -2942,7 +2879,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-design-studies",
-  label: "BA in Design Studies",
+  label: "Design Studies",
   categories: [
     {
       key: "general-education-core",
@@ -3002,7 +2939,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-music",
-  label: "BA in Music",
+  label: "Music",
   categories: [
     {
       key: "general-education-core",
@@ -3110,7 +3047,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-music-business",
-  label: "BA in Music Business",
+  label: "Music Business",
   categories: [
     {
       key: "general-and-basic-education",
@@ -3196,7 +3133,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-theatre-and-performance",
-  label: "BA in Theatre and Performance",
+  label: "Theatre and Performance",
   categories: [
     {
       key: "general-education-core",
@@ -3269,7 +3206,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-theatre-design-production-technology",
-  label: "BA in Theatre Design, Production, and Technology",
+  label: "Theatre Design, Production, and Technology",
   categories: [
     {
       key: "general-education-core",
@@ -3392,7 +3329,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-urban-education",
-  label: "BA in Urban Education",
+  label: "Urban Education",
   categories: [
     {
       key: "core-curriculum",
@@ -3444,7 +3381,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-human-development-and-learning",
-  label: "BA in Human Development and Learning",
+  label: "Human Development and Learning",
   categories: [
     {
       key: "general-education-core",
@@ -3568,7 +3505,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-anthropology",
-  label: "BA with a Major in Anthropology",
+  label: "Anthropology",
   categories: [
     {
       key: "major-core",
@@ -3591,7 +3528,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-black-studies",
-  label: "BA with a Major in Black Studies",
+  label: "Black Studies",
   categories: [
     {
       key: "major-core",
@@ -3692,7 +3629,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-chemistry",
-  label: "BA with a Major in Chemistry",
+  label: "Chemistry (BA)",
   categories: [
     {
       key: "prerequisite-and-collateral-courses",
@@ -3757,7 +3694,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-classical-studies",
-  label: "BA with a Major in Classical Studies",
+  label: "Classical Studies",
   categories: [
     {
       key: "classics-core",
@@ -3800,7 +3737,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-communication",
-  label: "BA with a Major in Communication",
+  label: "Communication",
   categories: [
     {
       key: "major-core",
@@ -3825,7 +3762,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-criminology-law-and-justice",
-  label: "BA with a Major in Criminology, Law, and Justice",
+  label: "Criminology, Law, and Justice",
   categories: [
     {
       key: "major-core",
@@ -3875,7 +3812,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-economics",
-  label: "BA with a Major in Economics",
+  label: "Economics",
   categories: [
     {
       key: "prerequisites",
@@ -3925,7 +3862,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-english",
-  label: "BA with a Major in English",
+  label: "English",
   categories: [
     {
       key: "major-core",
@@ -3953,7 +3890,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-teaching-of-english",
-  label: "BA in the Teaching of English",
+  label: "Teaching of English",
   categories: [
     {
       key: "core-requirements",
@@ -4010,12 +3947,12 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-french-and-francophone-studies",
-  label: "BA with a Major in French and Francophone Studies",
+  label: "French and Francophone Studies",
   categories: []
 },
 {
   key: "ba-gender-and-womens-studies",
-  label: "BA with a Major in Gender and Women’s Studies",
+  label: "Gender and Women’s Studies",
   categories: [
     {
       key: "major-core",
@@ -4125,7 +4062,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-germanic-studies",
-  label: "BA with a Major in Germanic Studies",
+  label: "Germanic Studies",
   categories: [
     {
       key: "major-core",
@@ -4148,7 +4085,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-teaching-of-german",
-  label: "BA in the Teaching of German",
+  label: "Teaching of German",
   categories: [
     {
       key: "major-core",
@@ -4186,7 +4123,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-global-asian-studies",
-  label: "BA with a Major in Global Asian Studies",
+  label: "Global Asian Studies",
   categories: [
     {
       key: "major-core",
@@ -4287,7 +4224,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-spanish",
-  label: "BA with a Major in Spanish",
+  label: "Spanish",
   categories: [
     {
       key: "major-core",
@@ -4305,7 +4242,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-teaching-of-spanish",
-  label: "BA in the Teaching of Spanish",
+  label: "Teaching of Spanish",
   categories: [
     {
       key: "major-core",
@@ -4345,7 +4282,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-history",
-  label: "BA with a Major in History",
+  label: "History",
   categories: [
     {
       key: "required-core",
@@ -4387,7 +4324,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-teaching-of-history",
-  label: "BA in the Teaching of History",
+  label: "Teaching of History",
   categories: [
     {
       key: "major-core",
@@ -4443,7 +4380,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-liberal-studies",
-  label: "BA with a Major in Liberal Studies",
+  label: "Liberal Studies",
   categories: [
     {
       key: "career-preparation",
@@ -4457,7 +4394,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-philosophy",
-  label: "BA with a Major in Philosophy",
+  label: "Philosophy",
   categories: [
     {
       key: "core-requirements",
@@ -4533,7 +4470,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-physics",
-  label: "BA with a Major in Physics",
+  label: "Physics (BA)",
   categories: [
     {
       key: "prerequisites",
@@ -4571,7 +4508,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-political-science",
-  label: "BA with a Major in Political Science",
+  label: "Political Science",
   categories: [
     {
       key: "core-requirements",
@@ -4604,7 +4541,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-applied-psychology",
-  label: "BA with a Major in Applied Psychology",
+  label: "Applied Psychology",
   categories: [
     {
       key: "core-requirements",
@@ -4660,7 +4597,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-sociology",
-  label: "BA with a Major in Sociology",
+  label: "Sociology",
   categories: [
     {
       key: "core-requirements",
@@ -4689,7 +4626,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-public-policy",
-  label: "BA in Public Policy",
+  label: "Public Policy",
   categories: [
     {
       key: "general-and-basic-education",
@@ -4779,7 +4716,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-urban-studies",
-  label: "BA in Urban Studies",
+  label: "Urban Studies",
   categories: [
     {
       key: "required-courses",
@@ -4816,7 +4753,7 @@ export const majorRequirements: MajorRequirement[] = [
 },
 {
   key: "ba-public-health",
-  label: "BA in Public Health",
+  label: "Public Health (BA)",
   categories: [
     {
       key: "major-required-courses",
