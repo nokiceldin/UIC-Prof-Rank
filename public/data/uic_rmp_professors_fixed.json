@@ -30679,6 +30679,29 @@
         "slug": "nick-mccormick-history"
     },
     {
+        "Name": "Adam Cordle",
+        "Department": "Music",
+        "School": "University of Illinois Chicago",
+        "Quality": 2.0,
+        "Would Take Again %": 17.0,
+        "Difficulty": 4.0,
+        "Ratings Count": 6,
+        "Profile URL": "https://www.ratemyprofessors.com/professor/2479922",
+        "slug": "adam-cordle-music"
+    },
+    {
+        "Name": "Robert Difazio",
+        "Department": "Music",
+        "School": "University of Illinois Chicago",
+        "Quality": 4.3,
+        "Would Take Again %": 38.0,
+        "Difficulty": 2.4,
+        "Ratings Count": 37,
+        "Profile URL": "https://www.ratemyprofessors.com/professor/853844",
+        "slug": "robert-difazio-music"
+    },
+    
+    {
         "Name": "Rebecca Beachy",
         "Department": "Art",
         "School": "University of Illinois Chicago",
