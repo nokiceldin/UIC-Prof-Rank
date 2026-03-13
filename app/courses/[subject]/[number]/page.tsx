@@ -1,8 +1,9 @@
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-
+import HeroSearch from "@/app/components/HeroSearch";
 import { notFound } from "next/navigation";
 import prisma from "@/app/lib/prisma";
+import { findSlugForUicName } from "@/app/lib/name";
 import CourseHeader from "../../../components/course/CourseHeader";
 import GradeDistributionCard from "../../../components/course/GradeDistributionCard";
 import CourseInsightCards from "../../../components/course/CourseInsightCards";
@@ -12,44 +13,12 @@ function decodeParam(value: string) {
   return decodeURIComponent(value || "").trim();
 }
 
-function normName(s: string) {
-  return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
-}
-
-// "Hodges, Mark Richard" -> ["mark", "richard", "hodges"]
-// "Ayala Rodriguez, Daniel" -> ["daniel", "ayala", "rodriguez"]
-function nameTokens(uicName: string): string[] {
-  if (uicName.includes(",")) {
-    const [last, ...rest] = uicName.split(",").map((s) => s.trim());
-    const firstParts = rest.join(" ").trim().split(/\s+/);
-    const lastParts = last.trim().split(/\s+/);
-    return [...firstParts, ...lastParts].map((t) => t.toLowerCase()).filter(Boolean);
-  }
-  return uicName.toLowerCase().split(/\s+/).filter(Boolean);
-}
-
-// Score how well a professor name matches a UIC instructor name
-// Higher = better match
-function matchScore(uicName: string, profName: string): number {
-  const uicTokens = nameTokens(uicName);
-  const profTokens = normName(profName).split(" ").filter(Boolean);
-  
-  let score = 0;
-  for (const pt of profTokens) {
-    if (uicTokens.includes(pt)) score += 1;
-  }
-  // Bonus if first names match exactly
-  if (uicTokens[0] && profTokens[0] && uicTokens[0] === profTokens[0]) score += 0.5;
-  return score;
-}
-
 export default async function CourseDetailPage({
   params,
 }: {
   params: Promise<{ subject: string; number: string }>;
 }) {
   const rawParams = await params;
-
   const subject = decodeParam(rawParams.subject).toUpperCase();
   const number = decodeParam(rawParams.number).toUpperCase();
 
@@ -66,17 +35,20 @@ export default async function CourseDetailPage({
   if (!course) notFound();
 
   const recentTerms = await prisma.term.findMany({
-    where: { code: { in: ["2024SP","2024SU","2024FA","2025SP","2025SU","2025FA","2026SP"] } },
+    where: {
+      code: { in: ["2024SP","2024SU","2024FA","2025SP","2025SU","2025FA","2026SP"] },
+    },
     select: { id: true },
   });
   const recentTermIds = recentTerms.map((t) => t.id);
 
-  const [totals, instructorGroups] = await Promise.all([
+  const [totals, instructorGroups, allProfessors] = await Promise.all([
     prisma.courseTermStats.aggregate({
       where: { courseId: course.id },
       _sum: {
-        gradeRegs: true, a: true, b: true, c: true, d: true, f: true, w: true,
-        adv: true, cr: true, dfr: true, i: true, ng: true, nr: true, o: true, pr: true, s: true, u: true,
+        gradeRegs: true, a: true, b: true, c: true, d: true,
+        f: true, w: true, adv: true, cr: true, dfr: true,
+        i: true, ng: true, nr: true, o: true, pr: true, s: true, u: true,
       },
     }),
     prisma.courseInstructorTermStats.groupBy({
@@ -85,37 +57,8 @@ export default async function CourseDetailPage({
       _sum: { gradeRegs: true, a: true, b: true, c: true, d: true, f: true, w: true },
       orderBy: { _sum: { gradeRegs: "desc" } },
     }),
+    prisma.professor.findMany({ select: { name: true, slug: true } }),
   ]);
-
-  // Fetch all professors and build slug map using fuzzy token matching
-  const allProfessors = await prisma.professor.findMany({
-    select: { name: true, slug: true },
-  });
-
-  const slugMap: Record<string, string | null> = {};
-  for (const row of instructorGroups) {
-    const uicName = row.instructorName;
-    const uicTokens = nameTokens(uicName);
-    
-    let bestSlug: string | null = null;
-    let bestScore = 0;
-
-    for (const prof of allProfessors) {
-      const score = matchScore(uicName, prof.name);
-      const profTokens = normName(prof.name).split(" ").filter(Boolean);
-      
-      // Must match at least the first name and last name token
-      const firstNameMatch = uicTokens[0] && profTokens[0] && uicTokens[0] === profTokens[0];
-      const hasLastNameMatch = profTokens.slice(1).some((t) => uicTokens.includes(t));
-      
-      if (score > bestScore && firstNameMatch && hasLastNameMatch) {
-        bestScore = score;
-        bestSlug = prof.slug;
-      }
-    }
-
-    slugMap[uicName] = bestSlug;
-  }
 
   const sum = totals._sum;
   const a = sum.a ?? 0, b = sum.b ?? 0, c = sum.c ?? 0, d = sum.d ?? 0;
@@ -123,6 +66,7 @@ export default async function CourseDetailPage({
   const adv = sum.adv ?? 0, cr = sum.cr ?? 0, dfr = sum.dfr ?? 0;
   const i = sum.i ?? 0, ng = sum.ng ?? 0, nr = sum.nr ?? 0;
   const o = sum.o ?? 0, pr = sum.pr ?? 0, s = sum.s ?? 0, u = sum.u ?? 0;
+
   const other = adv + cr + dfr + i + ng + nr + o + pr + s + u;
   const totalRegs = sum.gradeRegs ?? 0;
   const visualTotal = a + b + c + d + f + w;
@@ -143,11 +87,16 @@ export default async function CourseDetailPage({
       const pd = row._sum.d ?? 0, pf = row._sum.f ?? 0, pw = row._sum.w ?? 0;
       const pTotalRegs = row._sum.gradeRegs ?? 0;
       const gradedCount = pa + pb + pc + pd + pf;
-      const avgGpa = gradedCount > 0 ? (4*pa + 3*pb + 2*pc + 1*pd) / gradedCount : null;
+      const avgGpa = gradedCount > 0
+        ? (4 * pa + 3 * pb + 2 * pc + 1 * pd) / gradedCount
+        : null;
+
       return {
         instructorName: row.instructorName,
-        slug: slugMap[row.instructorName] ?? null,
-        avgGpa, gradedCount, totalRegs: pTotalRegs,
+        slug: findSlugForUicName(row.instructorName, allProfessors),
+        avgGpa,
+        gradedCount,
+        totalRegs: pTotalRegs,
         a: pa, b: pb, c: pc, d: pd, f: pf, w: pw,
       };
     })
@@ -161,7 +110,10 @@ export default async function CourseDetailPage({
     <main className="relative min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 dark:bg-gradient-to-b dark:from-white/5 dark:to-transparent" />
       <div className="mx-auto max-w-6xl px-5 py-10">
-        <CourseHeader course={course} />
+  <div className="mb-8">
+    <HeroSearch />
+  </div>
+  <CourseHeader course={course} />
 
         <div className="mt-6">
           <GradeDistributionCard
