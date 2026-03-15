@@ -1654,7 +1654,6 @@ export async function POST(req: Request) {
       "X-Content-Type-Options": "nosniff",
       "Cache-Control": "no-cache",
       "X-Accel-Buffering": "no",
-"Transfer-Encoding": "chunked",
     };
     if (isNew) {
       headers["Set-Cookie"] = `sparky_session=${sessionId}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax`;
