@@ -346,6 +346,43 @@ function TypingIndicator() {
   );
 }
 
+function ActionBtn({ title, onClick, children }: { title: string; onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      title={title}
+      onClick={onClick}
+      className="p-1.5 rounded-lg text-zinc-600 hover:text-zinc-300 hover:bg-zinc-800 transition-all duration-150"
+    >
+      {children}
+    </button>
+  );
+}
+
+function CopyBtn({ content }: { content: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      title="Copy"
+      onClick={() => {
+        navigator.clipboard.writeText(content);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }}
+      className="p-1.5 rounded-lg text-zinc-600 hover:text-zinc-300 hover:bg-zinc-800 transition-all duration-150"
+    >
+      {copied ? (
+        <svg className="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      ) : (
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+        </svg>
+      )}
+    </button>
+  );
+}
+
 function MessageBubble({ msg }: { msg: Message }) {
   if (msg.role === "user") {
     return (
@@ -353,45 +390,50 @@ function MessageBubble({ msg }: { msg: Message }) {
         <div className="max-w-[72%] md:max-w-[60%] bg-zinc-800 border border-zinc-700/60 text-zinc-100 rounded-2xl rounded-br-sm px-4 py-3 text-[14.5px] leading-relaxed">
           {msg.content}
         </div>
-        <div className="w-7 h-7 rounded-full bg-zinc-700 border border-zinc-600 flex items-center justify-center shrink-0 mb-0.5">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-zinc-300">
-            <circle cx="12" cy="8" r="4" />
-            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-          </svg>
-        </div>
       </div>
     );
   }
 
   return (
-    <div className="flex gap-3 items-start">
-      <SparkyAvatar size="sm" />
-      <div className={`flex-1 min-w-0 max-w-[85%] md:max-w-[78%] ${msg.error ? "opacity-60" : ""}`}>
-        <div className="text-[14.5px] leading-relaxed text-zinc-200 prose-sparky">
-          {msg.streaming ? (
-            // Target node for direct DOM writes — React never touches this during streaming
-            <div
-              data-stream-id={msg.id}
-              className="whitespace-pre-wrap"
-            />
-          ) : (
-            <div
-              className="space-y-1"
-              dangerouslySetInnerHTML={{ __html: formatContent(msg.content) }}
-            />
-          )}
-        </div>
-        {msg.error && (
-          <p className="text-xs text-red-400 mt-2 flex items-center gap-1.5">
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <circle cx="12" cy="12" r="10" /><path d="M12 8v4m0 4h.01" />
-            </svg>
-            Failed to get response
-          </p>
+  <div className="flex gap-3 items-start group">
+    <SparkyAvatar size="sm" />
+    <div className={`flex-1 min-w-0 max-w-[85%] md:max-w-[78%] ${msg.error ? "opacity-60" : ""}`}>
+      <div className="text-[14.5px] leading-relaxed text-zinc-200 prose-sparky">
+        {msg.streaming ? (
+          <div data-stream-id={msg.id} className="whitespace-pre-wrap" />
+        ) : (
+          <div
+            className="space-y-1"
+            dangerouslySetInnerHTML={{ __html: formatContent(msg.content) }}
+          />
         )}
       </div>
+      {!msg.streaming && !msg.error && (
+        <div className="flex items-center gap-0.5 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+          <CopyBtn content={msg.content} />
+          <ActionBtn title="Good response" onClick={() => {}}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/>
+            </svg>
+          </ActionBtn>
+          <ActionBtn title="Bad response" onClick={() => {}}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 15v4a3 3 0 003 3l4-9V2H5.72a2 2 0 00-2 1.7l-1.38 9a2 2 0 002 2.3H10z"/><path d="M17 2h2.67A2.31 2.31 0 0122 4v7a2.31 2.31 0 01-2.33 2H17"/>
+            </svg>
+          </ActionBtn>
+        </div>
+      )}
+      {msg.error && (
+        <p className="text-xs text-red-400 mt-2 flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/>
+          </svg>
+          Failed to get response
+        </p>
+      )}
     </div>
-  );
+  </div>
+);
 }
 
 function ChatInput({
@@ -417,8 +459,8 @@ function ChatInput({
     <div
       className={`relative bg-zinc-900 border transition-all duration-200 ${
         isFloating
-          ? "border-zinc-700/60 hover:border-zinc-600 focus-within:border-zinc-500 rounded-2xl shadow-xl"
-          : "border-zinc-800 hover:border-zinc-700 focus-within:border-zinc-600 rounded-2xl"
+  ? "border-zinc-700/60 hover:border-zinc-600 focus-within:border-zinc-500 rounded-3xl shadow-xl"
+  : "border-zinc-800 hover:border-zinc-700 focus-within:border-zinc-600 rounded-3xl"
       }`}
     >
       <textarea
@@ -438,15 +480,13 @@ function ChatInput({
       />
       <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 pb-3">
         <span className="text-[11px] text-zinc-600 select-none">
-          {loading ? (
-            <span className="text-zinc-500 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full animate-pulse" />
-              Sparky is thinking...
-            </span>
-          ) : (
-            "Enter to send · Shift+Enter for new line"
-          )}
-        </span>
+  {loading && (
+    <span className="text-zinc-500 flex items-center gap-1.5">
+      <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full animate-pulse" />
+      Sparky is thinking...
+    </span>
+  )}
+</span>
         <button
           onClick={() => onSend()}
           disabled={!value.trim() || loading}
@@ -750,22 +790,50 @@ function ChatContent() {
       ]);
 
       const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let accumulated = "";
+const decoder = new TextDecoder();
+let accumulated = "";
+let displayed = "";
+const charQueue: string[] = [];
+let animating = false;
 
-      // Write directly to the DOM node — zero React re-renders during streaming
-      const getDomNode = () =>
-        document.querySelector(`[data-stream-id="${assistantId}"]`) as HTMLElement | null;
+const getDomNode = () =>
+  document.querySelector(`[data-stream-id="${assistantId}"]`) as HTMLElement | null;
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const delta = decoder.decode(value, { stream: true });
-accumulated += delta;
-const node = getDomNode();
-if (node) node.insertAdjacentText("beforeend", delta);
-        if (node) node.textContent = accumulated;
-      }
+// Drains the queue one character at a time at ~60 chars/sec
+function drainQueue() {
+  if (animating) return;
+  animating = true;
+  function tick() {
+    // Drain up to 3 chars per frame so it never falls too far behind
+    const batch = Math.min(3, charQueue.length);
+    if (batch === 0) { animating = false; return; }
+    for (let i = 0; i < batch; i++) {
+      displayed += charQueue.shift()!;
+    }
+    const node = getDomNode();
+if (node) node.innerHTML = formatContent(displayed);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+while (true) {
+  const { done, value } = await reader.read();
+  if (done) break;
+  const delta = decoder.decode(value, { stream: true });
+  accumulated += delta;
+  for (const char of delta) charQueue.push(char);
+  drainQueue();
+}
+
+// Wait for queue to fully drain before handing off to React
+await new Promise<void>(resolve => {
+  function waitDrain() {
+    if (charQueue.length === 0) { resolve(); return; }
+    requestAnimationFrame(waitDrain);
+  }
+  requestAnimationFrame(waitDrain);
+});
 
       // Stream done — hand off to React with full content so formatContent runs
       setMessages((prev: Message[]) =>
