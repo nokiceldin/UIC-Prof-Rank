@@ -1479,22 +1479,22 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Malformed request" }, { status: 400 });
   }
 
-  // ── Session & query analysis (parallel) ──────────────────────────────────
-  const { sessionId, isNew } = resolveSession(req);
-  const query = analyzeQuery(lastMsg, messages.slice(0, -1));
+// ── Session & query analysis ──────────────────────────────────────────────
+const { sessionId, isNew } = resolveSession(req);
+const query = analyzeQuery(lastMsg, messages.slice(0, -1));
 
-  // ── Parallel: memory + legacy intent classifiers ──────────────────────────
-  const [memoryResult, aiIntentResult, regexIntentResult, regexCiResult] = await Promise.allSettled([
-    getMemory(sessionId),
-    classifyIntent(lastMsg, messages.slice(0, -1)),
-    Promise.resolve(detectIntent(lastMsg)),
-    Promise.resolve(detectCampusIntent(lastMsg)),
-  ]);
+// ── Fetch memory first, then classify with it ─────────────────────────────
+const userMemory = await getMemory(sessionId).catch(() => null);
 
-  const userMemory = memoryResult.status === "fulfilled" ? memoryResult.value : null;
-  const aiIntent = aiIntentResult.status === "fulfilled" ? aiIntentResult.value : null;
-  const ri = regexIntentResult.status === "fulfilled" ? regexIntentResult.value : ({} as any);
-  const rc = regexCiResult.status === "fulfilled" ? regexCiResult.value : ({} as any);
+const [aiIntentResult, regexIntentResult, regexCiResult] = await Promise.allSettled([
+  classifyIntent(lastMsg, messages.slice(0, -1), userMemory),
+  Promise.resolve(detectIntent(lastMsg)),
+  Promise.resolve(detectCampusIntent(lastMsg)),
+]);
+
+const aiIntent = aiIntentResult.status === "fulfilled" ? aiIntentResult.value : null;
+const ri = regexIntentResult.status === "fulfilled" ? regexIntentResult.value : ({} as any);
+const rc = regexCiResult.status === "fulfilled" ? regexCiResult.value : ({} as any);
 
   // Merge AI + regex intent (AI wins, regex fills gaps)
   const intent = aiIntent ? {

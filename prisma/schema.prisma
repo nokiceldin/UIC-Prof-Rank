@@ -91,17 +91,26 @@ model NewsItem {
 
 model KnowledgeChunk {
   id          String   @id @default(cuid())
-  content     String   @db.Text       // The actual text Sparky will read
-  sourceType  String                  // "course" | "professor" | "news" | "knowledge"
-  sourceId    String?                 // ref to Course.id, Professor.id, NewsItem.id etc
-  metadata    String   @db.Text       // JSON: {subject, number, name, dept, etc}
+  content     String   @db.Text
+  sourceType  String
+  sourceId    String?
+  metadata    String   @db.Text
+  embedding   Unsupported("vector(1024)")?
   embeddingUpdatedAt DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([sourceType])
   @@index([sourceId])
+@@index([embedding])
   @@unique([sourceId, sourceType])
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  message   String
+  rating    String   // "up" or "down"
+  createdAt DateTime @default(now())
 }
 
 model ConversationSession {
@@ -145,6 +154,8 @@ model CourseTermStats {
   @@unique([courseId, termId])
   @@index([termId])
 }
+
+
 
 model CourseInstructorTermStats {
   id             String   @id @default(cuid())

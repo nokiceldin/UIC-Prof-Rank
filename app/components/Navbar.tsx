@@ -31,7 +31,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur-md dark:border-white/8 dark:bg-zinc-950/95">
-      <div className="mx-auto flex w-full max-w-6xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="flex w-full items-center gap-4 px-4 py-3 sm:px-6">
         <Link
           href="/"
           className="flex min-w-0 shrink-0 items-center gap-2.5 rounded-xl px-1 py-1 transition hover:opacity-80"
@@ -55,17 +55,14 @@ alt="UIC Sparky"
         <nav className="ml-auto flex shrink-0 items-center gap-4 sm:gap-6 md:gap-8">
           {navLink("/courses", "Courses")}
           {navLink("/professors", "Professors")}
-          <div className="ml-1 shrink-0 sm:ml-2">
-            <ThemeToggle />
-          </div>
 
           <Link
   href="/chat"
   className={`group flex items-center gap-2 rounded-xl border px-3.5 py-1.5 text-xs font-bold tracking-wide transition-all sm:text-sm ${
-    pathname.startsWith("/chat")
-      ? "border-red-400 bg-red-600 text-white shadow-lg shadow-red-600/40"
-      : "border-red-500/40 bg-red-500/10 text-red-600 shadow-md shadow-red-500/20 hover:border-red-400 hover:bg-red-500/20 dark:text-red-400 dark:hover:bg-red-500/20"
-  }`}
+  pathname.startsWith("/chat")
+    ? "border-red-500 bg-red-600 text-white"
+    : "border-zinc-700 bg-zinc-800 text-zinc-200 hover:bg-zinc-700 hover:text-white"
+}`}
 >
   <span className="relative flex h-2 w-2">
     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
@@ -81,6 +78,9 @@ alt="UIC Sparky"
   </span>
 </Link>
         </nav>
+        <div className="ml-1 shrink-0 sm:ml-2">
+            <ThemeToggle />
+          </div>
       </div>
     </header>
   );

@@ -10,7 +10,7 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL, max: 3 });
 const prisma = new PrismaClient({ adapter: new PrismaPg(pool) });
 
 const BATCH_SIZE = 64;
-const EMBEDDING_MODEL = "voyage-3";
+const EMBEDDING_MODEL = "voyage-3-large";
 
 // ─── Embed a batch of texts via Voyage AI ─────────────────────────────────────
 async function embedBatch(texts) {
@@ -60,10 +60,12 @@ async function buildCourseChunks() {
   const courses = await prisma.course.findMany({
     where: { avgGpa: { not: null } },
     select: {
-      id: true, subject: true, number: true, title: true,
-      deptName: true, avgGpa: true, difficultyScore: true,
-      totalRegsAllTime: true, isGenEd: true, genEdCategory: true,
-    },
+  id: true, subject: true, number: true, title: true,
+  deptName: true, avgGpa: true, difficultyScore: true,
+  totalRegsAllTime: true, isGenEd: true, genEdCategory: true,
+  termStats: { select: { a: true, b: true, c: true, d: true, f: true, gradeRegs: true } },
+  instructorStats: { select: { instructorName: true, gradeRegs: true } },
+},
     orderBy: { totalRegsAllTime: "desc" },
   });
 
@@ -74,15 +76,34 @@ async function buildCourseChunks() {
   for (let i = 0; i < courses.length; i += BATCH_SIZE) {
     const batch = courses.slice(i, i + BATCH_SIZE);
 
-    const texts = batch.map(c =>
-      `${c.subject} ${c.number} — ${c.title}. ` +
-      `Department: ${c.deptName ?? "N/A"}. ` +
-      `Average GPA: ${c.avgGpa?.toFixed(2) ?? "N/A"}. ` +
-      `Difficulty: ${diffLabel(c.difficultyScore)} (${c.difficultyScore?.toFixed(1) ?? "N/A"}/5). ` +
-      `Total enrollments: ${c.totalRegsAllTime?.toLocaleString() ?? "N/A"}. ` +
-      (c.isGenEd ? `Gen Ed course. Category: ${c.genEdCategory ?? "N/A"}. ` : "") +
-      `Course code: ${c.subject} ${c.number}.`
-    );
+    const texts = batch.map(c => {
+  const gradeInfo = c.termStats?.length
+    ? (() => {
+        const totals = c.termStats.reduce((acc, t) => ({
+          a: acc.a + t.a, b: acc.b + t.b, c: acc.c + t.c,
+          d: acc.d + t.d, f: acc.f + t.f, total: acc.total + t.gradeRegs
+        }), { a: 0, b: 0, c: 0, d: 0, f: 0, total: 0 });
+        if (totals.total === 0) return "";
+        const pct = x => ((x / totals.total) * 100).toFixed(0);
+        return `Grade breakdown: ${pct(totals.a)}% A, ${pct(totals.b)}% B, ${pct(totals.c)}% C, ${pct(totals.d)}% D, ${pct(totals.f)}% F. `;
+      })()
+    : "";
+  const topProfs = c.instructorStats
+    ?.sort((a, b) => b.gradeRegs - a.gradeRegs)
+    ?.slice(0, 3)
+    ?.map(i => i.instructorName)
+    ?.join(", ") ?? "";
+
+  return `${c.subject} ${c.number} — ${c.title}. ` +
+    `Department: ${c.deptName ?? "N/A"}. ` +
+    `Average GPA: ${c.avgGpa?.toFixed(2) ?? "N/A"}. ` +
+    `Difficulty: ${diffLabel(c.difficultyScore)} (${c.difficultyScore?.toFixed(1) ?? "N/A"}/5). ` +
+    `Total enrollments: ${c.totalRegsAllTime?.toLocaleString() ?? "N/A"}. ` +
+    gradeInfo +
+    (topProfs ? `Common instructors: ${topProfs}. ` : "") +
+    (c.isGenEd ? `Gen Ed course. Category: ${c.genEdCategory ?? "N/A"}. ` : "") +
+    `Course code: ${c.subject} ${c.number}.`;
+});
 
     try {
       const embeddings = await embedBatch(texts);
@@ -115,10 +136,10 @@ async function buildProfessorChunks() {
   const professors = await prisma.professor.findMany({
     where: { rmpRatingsCount: { gt: 0 } },
     select: {
-      id: true, name: true, department: true, school: true,
-      rmpQuality: true, rmpDifficulty: true, rmpRatingsCount: true,
-      rmpWouldTakeAgain: true, aiSummary: true, slug: true,
-    },
+  id: true, name: true, department: true, school: true,
+  rmpQuality: true, rmpDifficulty: true, rmpRatingsCount: true,
+  rmpWouldTakeAgain: true, aiSummary: true, slug: true,
+},
     orderBy: { rmpRatingsCount: "desc" },
   });
 
@@ -129,13 +150,13 @@ async function buildProfessorChunks() {
     const batch = professors.slice(i, i + BATCH_SIZE);
 
     const texts = batch.map(p =>
-      `Professor ${p.name}. ` +
-      `Department: ${p.department}. ` +
-      `RateMyProfessors rating: ${p.rmpQuality?.toFixed(1) ?? "N/A"}/5 from ${p.rmpRatingsCount ?? 0} reviews. ` +
-      `Difficulty rating: ${p.rmpDifficulty?.toFixed(1) ?? "N/A"}/5. ` +
-      `Would take again: ${p.rmpWouldTakeAgain ?? "N/A"}%. ` +
-      (p.aiSummary ? `Summary: ${p.aiSummary.slice(0, 300)}` : "")
-    );
+  `Professor ${p.name}. ` +
+  `Department: ${p.department}. ` +
+  `RateMyProfessors rating: ${p.rmpQuality?.toFixed(1) ?? "N/A"}/5 from ${p.rmpRatingsCount ?? 0} reviews. ` +
+  `Difficulty rating: ${p.rmpDifficulty?.toFixed(1) ?? "N/A"}/5. ` +
+  `Would take again: ${p.rmpWouldTakeAgain ?? "N/A"}%. ` +
+  (p.aiSummary ? `Summary: ${p.aiSummary}` : "")
+);
 
     try {
       const embeddings = await embedBatch(texts);

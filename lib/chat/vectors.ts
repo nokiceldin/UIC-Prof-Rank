@@ -4,7 +4,7 @@ import { prisma } from "@/app/lib/prisma";
 const client = new Anthropic();
 
 // Anthropic's embedding model — 1024 dimensions
-const EMBEDDING_MODEL = "voyage-3";
+const EMBEDDING_MODEL = "voyage-3-large";
 
 async function callVoyage(input: string | string[], inputType: string): Promise<number[][]> {
   const res = await fetch("https://api.voyageai.com/v1/embeddings", {

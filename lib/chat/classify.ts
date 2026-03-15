@@ -104,7 +104,8 @@ Examples:
 
 export async function classifyIntent(
   message: string,
-  conversationHistory: { role: string; content: string }[]
+  conversationHistory: { role: string; content: string }[],
+  memory?: { major?: string; year?: string; interests?: string[] } | null
 ): Promise<ClassifiedIntent | null> {
   try {
     // Build context from last few messages so follow-ups work
@@ -113,9 +114,13 @@ export async function classifyIntent(
       .map((m) => `${m.role}: ${m.content}`)
       .join("\n");
 
-    const userPrompt = context
-      ? `Conversation so far:\n${context}\n\nLatest message to classify: "${message}"`
-      : `Message to classify: "${message}"`;
+      const memoryHint = memory && Object.keys(memory).length > 0
+  ? `\nStudent context: ${memory.major ? `${memory.year ?? ""} ${memory.major} major` : ""} ${memory.interests?.length ? `interested in ${memory.interests.join(", ")}` : ""}`
+  : "";
+
+const userPrompt = context
+  ? `Conversation so far:\n${context}\n\nLatest message to classify: "${message}"`
+  : `Message to classify: "${message}"`;
 
     const response = await client.messages.create({
       model: "claude-haiku-4-5-20251001", // Fast + cheap for classification
@@ -123,6 +128,8 @@ export async function classifyIntent(
       system: SYSTEM_PROMPT,
       messages: [{ role: "user", content: userPrompt }],
     });
+
+    
 
     const text = (response.content[0] as { type: string; text?: string }).text ?? "";
     const clean = text.replace(/```json|```/g, "").trim();

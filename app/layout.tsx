@@ -5,6 +5,8 @@ import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import Navbar from "./components/Navbar"
 import ThemeInit from "./components/ThemeInit"
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${inter.className} ${geistSans.variable} ${geistMono.variable}`}>
         <ThemeInit />
         <Navbar />
         {children}
