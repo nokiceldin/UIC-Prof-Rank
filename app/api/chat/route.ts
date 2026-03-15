@@ -1653,8 +1653,10 @@ export async function POST(req: Request) {
     const headers: Record<string, string> = {
       "Content-Type": "text/plain; charset=utf-8",
       "X-Content-Type-Options": "nosniff",
-      "Cache-Control": "no-cache",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
       "X-Accel-Buffering": "no",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
     };
     if (isNew) {
       headers["Set-Cookie"] = `sparky_session=${sessionId}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax`;
